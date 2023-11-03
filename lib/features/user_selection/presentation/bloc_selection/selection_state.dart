@@ -7,8 +7,13 @@ class InitialState extends SelectionState {}
 
 // При успешной загрузке пользователей
 class SuccesfulUploadingState extends SelectionState {
-  SuccesfulUploadingState({required this.users, required this.userIndex});
+  SuccesfulUploadingState({
+    required this.users,
+    required this.photos,
+    required this.userIndex,
+  });
   List<UserModel?> users;
+  List<PhotoModel?> photos;
   int userIndex;
 }
 

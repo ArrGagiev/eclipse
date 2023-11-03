@@ -17,7 +17,7 @@ class InformationBloc extends Bloc<InformationEvent, InformationState> {
     emit(LoadingIndicatorState());
     // -------------------------------------------------------------------
     Repository repository = Repository();
-    InfoUseCase infoUseCase = InfoUseCase(infoRepository: repository);
+    InfoUseCase infoUseCase = InfoUseCase(repository: repository);
     // -------------------------------------------------------------------
     try {
       List<PhotoModel?> photos = await infoUseCase.call();

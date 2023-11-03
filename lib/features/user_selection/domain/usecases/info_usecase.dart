@@ -2,10 +2,10 @@ import 'package:eclipse/features/user_selection/data/repository/users_repository
 import 'package:eclipse/features/user_selection/domain/entities/photo_model.dart';
 
 class InfoUseCase {
-  InfoUseCase({required this.infoRepository});
-  final Repository infoRepository;
+  InfoUseCase({required this.repository});
+  final Repository repository;
 
   Future<List<PhotoModel?>> call() async {
-    return await infoRepository.photosList();
+    return await repository.photosList();
   }
 }

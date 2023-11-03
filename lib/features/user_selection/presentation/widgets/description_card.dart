@@ -1,4 +1,3 @@
-import 'package:eclipse/common/widgets/custom_text.dart';
 import 'package:eclipse/common/widgets/space_divider.dart';
 import 'package:eclipse/features/user_selection/domain/entities/user_model.dart';
 import 'package:flutter/material.dart';
@@ -15,25 +14,25 @@ class DescriptionCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // ---------------------------------------------------- Имя
-          CustomText(
-            text: user?.name.toString() ?? '',
+          Text(
+            user?.name.toString() ?? '',
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            fontSize: 28,
+            style: const TextStyle(fontSize: 28),
           ),
           const SpaceDivider(height: 20),
           // ------------------------------------------------- Работа
-          CustomText(
-            text: user?.company?.name.toString() ?? '',
+          Text(
+            user?.company?.name.toString() ?? '',
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            fontSize: 20,
+            style: const TextStyle(fontSize: 20),
           ),
           const SpaceDivider(height: 20),
           // ----------------------------------------------- Описание
-          CustomText(
-            text: user?.company?.catchPhrase.toString() ?? '',
-            fontSize: 16,
+          Text(
+            user?.company?.catchPhrase.toString() ?? '',
+            style: const TextStyle(fontSize: 16),
           ),
         ],
       ),

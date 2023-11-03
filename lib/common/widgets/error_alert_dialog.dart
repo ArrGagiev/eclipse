@@ -1,4 +1,3 @@
-import 'package:eclipse/common/widgets/custom_text.dart';
 import 'package:eclipse/features/user_selection/presentation/widgets/buttons.dart';
 import 'package:flutter/material.dart';
 
@@ -18,8 +17,8 @@ class ErrorAlertDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       actionsAlignment: MainAxisAlignment.center,
-      title: CustomText(text: title),
-      content: CustomText(text: content),
+      title: Text(title),
+      content: Text(content),
       actions: [
         SimpleButton(
           text: 'Повторить попытку',

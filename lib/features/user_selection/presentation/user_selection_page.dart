@@ -39,6 +39,7 @@ class UserSelectionPage extends StatelessWidget {
                           // ------------------------------------------ Карточка
                           UserCard(
                             user: state.users[state.userIndex],
+                            photos: state.photos,
                             onTap: () {
                               infoDialog(
                                 context,

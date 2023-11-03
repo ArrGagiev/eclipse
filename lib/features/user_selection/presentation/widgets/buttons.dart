@@ -1,4 +1,3 @@
-import 'package:eclipse/common/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class SelectionButton extends StatelessWidget {
@@ -27,7 +26,7 @@ class SimpleButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () => onPressed != null ? onPressed!() : null,
-      child: CustomText(text: text),
+      child: Text(text),
     );
   }
 }

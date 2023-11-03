@@ -1,11 +1,13 @@
+import 'package:eclipse/features/user_selection/domain/entities/photo_model.dart';
 import 'package:eclipse/features/user_selection/domain/entities/user_model.dart';
 import 'package:eclipse/features/user_selection/presentation/decorations/card_decorations.dart';
 import 'package:flutter/material.dart';
 
 class UserCard extends StatelessWidget {
-  const UserCard({super.key, this.onTap, this.user});
+  const UserCard({super.key, this.onTap, this.user, required this.photos});
   final Function? onTap;
   final UserModel? user;
+  final List<PhotoModel?> photos;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,10 @@ class UserCard extends StatelessWidget {
             Container(
               width: double.infinity,
               height: MediaQuery.of(context).size.height * desiredHeight,
-              decoration: cardDecoration(user: user), // TODO !!!!!!!!!!!!!!!!
+              decoration: cardDecoration(
+                user: user,
+                photos: photos,
+              ),
             ),
             // ----------------------------------------------------------- Имя
             Positioned(
